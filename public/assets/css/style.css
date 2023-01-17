@@ -1,0 +1,37 @@
+.sidebar {
+    width: 280px !important;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.radio {
+    padding: 6.8px 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .sidebar {
+        position: absolute;
+        left: -280px;
+        z-index: 100;
+        transition: all 0.6s;
+    }
+
+    .opac {
+        display: none !important;
+    }
+
+    .show {
+        position: fixed;
+        left: -1px;
+        transition: all 0.6s;
+    }
+
+    .myBorder {
+        border-bottom: 3px solid blue;
+        padding-bottom: 1.5rem;
+    }
+}
