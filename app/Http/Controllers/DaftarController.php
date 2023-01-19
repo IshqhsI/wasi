@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\PaketPekerjaan;
+use App\Models\TertibUsaha;
 use GuzzleHttp\Promise\Create;
 use Illuminate\Http\Request;
 
@@ -18,7 +19,6 @@ class DaftarController extends Controller
 
     public function storePaket(Request $request)
     {
-
         // ddd($request);
 
         $validated = $request->validate([
@@ -73,6 +73,42 @@ class DaftarController extends Controller
 
         // Next ke Daftar 2
 
+        return redirect('/tertib');
+    }
+
+    public function tertib()
+    {
+        return view('daftar/tertib', [
+            'title' => 'Tertib Usaha Jasa Konstruksi'
+        ]);
+    }
+
+    public function storeTertib(Request $request)
+    {
+        // dd($request);
+
+        $nib = $request->file('nib')->store('nib');
+        $npwp_perusahaan = $request->file('npwp_perusahaan')->store('npwp_perusahaan');
+        $riwayat = $request->file('riwayat_pengalaman_badan_usaha')->store('riwayat');
+        $sertifikat_badan_usaha = $request->file('sertifikat_badan_usaha')->store('sertifikat_badan_usaha');
+        $dokumen_berita = $request->file('dokumen_berita_acara_serah_terima')->store('dokumen_berita');
+        $dokumen_kontrak_k3 = $request->file('dokumen_kontrak_k3')->store('dokumen_kontrak_k3');
+
+        TertibUsaha::create([
+            'id_user' => 1,
+            'klasifikasi_usaha' => $request->klasifikasi_usaha,
+            'bentuk_usaha' => $request->bentuk_usaha,
+            'kualifikasi_usaha' => $request->kualifikasi_usaha,
+            'perizinan_berusaha' => $request->perizinan_berusaha,
+            'nib' => $nib,
+            'npwp_perusahaan' => $npwp_perusahaan,
+            'sertifikat_badan_usaha' => $sertifikat_badan_usaha,
+            'no_tglAkta_namaNotaris' => $request->no_tglAkta_namaNotaris,
+            'lama_pendirian_badan_usaha' => $request->lama_pendirian_badan_usaha,
+            'riwayat_pengalaman_badan_usaha' => $riwayat,
+            'dokumen_berita_acara_serah_terima' => $dokumen_berita,
+            'dokumen_kontrak_k3' => $dokumen_kontrak_k3
+        ]);
         return redirect('/');
     }
 }
