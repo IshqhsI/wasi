@@ -89,9 +89,17 @@ class DaftarController extends Controller
 
         $nib = $request->file('nib')->store('nib');
         $npwp_perusahaan = $request->file('npwp_perusahaan')->store('npwp_perusahaan');
-        $riwayat = $request->file('riwayat_pengalaman_badan_usaha')->store('riwayat');
         $sertifikat_badan_usaha = $request->file('sertifikat_badan_usaha')->store('sertifikat_badan_usaha');
-        $dokumen_berita = $request->file('dokumen_berita_acara_serah_terima')->store('dokumen_berita');
+        if ($request->file('riwayat_pengalaman_badan_usaha') !== NULL) {
+
+            $riwayat = $request->file('riwayat_pengalaman_badan_usaha')->store('riwayat');
+            $dokumen_berita = $request->file('dokumen_berita_acara_serah_terima')->store('dokumen_berita');
+        } else {
+            $riwayat = NULL;
+            $dokumen_berita = NULL;
+        }
+
+
         $dokumen_kontrak_k3 = $request->file('dokumen_kontrak_k3')->store('dokumen_kontrak_k3');
 
         TertibUsaha::create([
