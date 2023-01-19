@@ -22,7 +22,8 @@
             </a>
         </li>
         <li>
-            <a href="#" class="nav-link text-white">
+            <a href="/tertib"
+                class="nav-link text-white <?= $title === 'Tertib Usaha Jasa Konstruksi' ? ' active' : '' ?>">
                 <i class="fa-solid fa-cart-shopping me-2"></i>
                 Orders
             </a>
@@ -86,9 +87,10 @@
             </a>
         </li>
         <li>
-            <a href="#" class="nav-link text-white">
+            <a href="/tertib"
+                class="nav-link text-white <?= $title === 'Tertib Usaha Jasa Konstruksi' ? ' active' : '' ?>">
                 <i class="fa-solid fa-cart-shopping me-2"></i>
-                Orders
+                Tertib Usaha
             </a>
         </li>
         <li>

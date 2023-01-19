@@ -24,3 +24,6 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/daftar', [DaftarController::class, 'index']);
 Route::post('/daftar', [DaftarController::class, 'storePaket']);
+
+Route::get('/tertib', [DaftarController::class, 'tertib']);
+Route::post('/tertib', [DaftarController::class, 'storeTertib']);
