@@ -29,7 +29,7 @@
             </a>
         </li>
         <li>
-            <a href="#" class="nav-link text-white">
+            <a href="/penyelenggaraan" class="nav-link text-white">
                 <i class="fa-sharp fa-solid fa-store me-2"></i>
                 Products
             </a>
@@ -94,7 +94,7 @@
             </a>
         </li>
         <li>
-            <a href="#" class="nav-link text-white">
+            <a href="/penyelenggaraan" class="nav-link text-white">
                 <i class="fa-sharp fa-solid fa-store me-2"></i>
                 Products
             </a>

@@ -27,3 +27,6 @@ Route::post('/daftar', [DaftarController::class, 'storePaket']);
 
 Route::get('/tertib', [DaftarController::class, 'tertib']);
 Route::post('/tertib', [DaftarController::class, 'storeTertib']);
+
+Route::get('/penyelenggaraan', [DaftarController::class, 'penyelenggaraan']);
+Route::post('/penyelenggaraan', [DaftarController::class, 'storePenyelenggaraan']);

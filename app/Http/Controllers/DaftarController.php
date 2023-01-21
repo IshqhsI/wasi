@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\PaketPekerjaan;
 use App\Models\TertibUsaha;
+use App\Models\TertibPenyelenggaraan;
 use GuzzleHttp\Promise\Create;
 use Illuminate\Http\Request;
 
@@ -117,6 +118,44 @@ class DaftarController extends Controller
             'dokumen_berita_acara_serah_terima' => $dokumen_berita,
             'dokumen_kontrak_k3' => $dokumen_kontrak_k3
         ]);
+        return redirect('/penyelenggaraan');
+    }
+
+    public function penyelenggaraan()
+    {
+        return view('daftar/penyelenggaraan', [
+            'title' => 'Tertib Penyelenggaraan Jasa Konstruksi'
+        ]);
+    }
+
+    public function storePenyelenggaraan(Request $request)
+    {
+        $dokumen_jaminan_pelaksanaan = $request->file('dokumen_jaminan_pelaksanaan')->store('dokumen_jaminan_pelaksanaan');
+        $dokumen_jaminan_uang_muka = $request->file('dokumen_jaminan_uang_muka')->store('dokumen_jaminan_uang_muka');
+        $bukti_pembayaran_asuransi_tenaga_kerja = $request->file('bukti_pembayaran_asuransi_tenaga_kerja')->store('bukti_pembayaran_asuransi_tenaga_kerja');
+        $bukti_sertifikat_operasional = $request->file('bukti_sertifikat_operasional')->store('bukti_sertifikat_operasional');
+
+
+        TertibPenyelenggaraan::create([
+            'id_user' => 1,
+            'jaminan_pelaksanaan' => $request->jaminan_pelaksanaan,
+            'dokumen_jaminan_pelaksanaan' => $dokumen_jaminan_pelaksanaan,
+            'jaminan_uang_muka' => $request->jaminan_uang_muka,
+            'dokumen_jaminan_uang_muka' => $dokumen_jaminan_uang_muka,
+            'biaya_penyelenggaraan_smkk' => $request->biaya_penyelenggaraan_smkk,
+            'biaya_penyelenggaran_sesuai_permen' => $request->biaya_penyelenggaran_sesuai_permen,
+            'bukti_pembayaran_asuransi_tenaga_kerja' => $bukti_pembayaran_asuransi_tenaga_kerja,
+            'bahan_atau_material' => $request->bahan_atau_material,
+            'penggunaan_barang_material' => $request->penggunaan_barang_material,
+            'persen_penggunaan_barang_material' => $request->persen_penggunaan_barang_material,
+            'standar_mutu_peralatan' => $request->standar_mutu_peralatan,
+            'bukti_sertifikat_operasional' => $bukti_sertifikat_operasional,
+            'jumlah_tenaga_kerja_yang_dipekerjakan' => $request->jumlah_tenaga_kerja_yang_dipekerjakan,
+            'jumlah_tenaga_kerja_yang_memiliki_sertifikat' => $request->jumlah_tenaga_kerja_yang_memiliki_sertifikat
+
+        ]);
+
         return redirect('/');
     }
+
 }
