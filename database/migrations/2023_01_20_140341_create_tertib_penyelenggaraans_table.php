@@ -26,7 +26,7 @@ return new class extends Migration {
             $table->string('penggunaan_barang_material');
             $table->string('persen_penggunaan_barang_material')->nullable();
             $table->string('standar_mutu_peralatan');
-            $table->string('bukti_sertifikat_operasional');
+            $table->string('bukti_sertifikat_operasional')->nullable();
             $table->string('jumlah_tenaga_kerja_yang_dipekerjakan');
             $table->string('jumlah_tenaga_kerja_yang_memiliki_sertifikat');
             $table->timestamps();

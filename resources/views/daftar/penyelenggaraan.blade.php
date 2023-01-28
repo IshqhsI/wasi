@@ -143,11 +143,12 @@
                                 </div>
                             </div>
 
-                            <label class="fw-bold" for="persen_penggunaan_barang_material">Berapa persen penggunaan
+                            <label class="fw-bold persen" for="persen_penggunaan_barang_material ">Berapa persen
+                                penggunaan
                                 barang/material luar
                                 negeri</label>
                             <input type="text" name="persen_penggunaan_barang_material"
-                                id="persen_penggunaan_barang_material" class="form-control my-2">
+                                id="persen_penggunaan_barang_material" class="form-control my-2 persen">
 
                             <div class="form-group my-2">
                                 <label class="fw-bold" for="standar_mutu_peralatan">Terkait standar mutu peralatan, apakah
@@ -168,9 +169,9 @@
                                 </div>
                             </div>
 
-                            <div class="form-group my-2">
+                            <div class="form-group my-2 standarOperasional">
                                 <label class="fw-bold" for="bukti_sertifikat_operasional">Bukti sertifikat operasional
-                                    kelaikan alat (jika ada)</label>
+                                    kelayakan alat</label>
                                 <div class="input-group my-2">
                                     <input type="file" class="form-control" id="bukti_sertifikat_operasional"
                                         name="bukti_sertifikat_operasional">

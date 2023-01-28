@@ -29,7 +29,8 @@
                         @csrf
                         <div class="col-lg-6">
                             <label class="fw-bold" for="email">Email</label>
-                            <input type="email" name="email" id="email" class="form-control my-2">
+                            <input type="email" name="email" id="email" class="form-control my-2"
+                                value="{{ Auth::user()->email }}" readonly>
 
                             <label class="fw-bold" for="dinas">Dinas / Pengguna Jasa</label>
                             <input type="text" name="dinas" id="dinas" class="form-control my-2">

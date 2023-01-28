@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Models\PaketPekerjaan;
 use App\Models\TertibUsaha;
 use App\Models\TertibPenyelenggaraan;
@@ -10,9 +11,18 @@ use Illuminate\Http\Request;
 
 class DaftarController extends Controller
 {
+
+
+
     //
     public function index()
     {
+        $paket = PaketPekerjaan::where('id_user', Auth::user()->id)->first();
+
+        if (isset($paket)) {
+            return redirect('/tertib');
+        }
+
         return view('daftar/index', [
             'title' => 'Daftar'
         ]);
@@ -50,7 +60,7 @@ class DaftarController extends Controller
         $jadwalPelaksanaanPekerjaan = $request->file('jadwalPelaksanaanPekerjaan')->store('jadwalPelaksanaanPekerjaan');
 
         PaketPekerjaan::create([
-            'id_user' => 1,
+            'id_user' => Auth::user()->id,
             'dinas' => $request->dinas,
             'pejabat_pembuat_komitmen' => $request->ppk,
             'nama_paket_pekerjaan' => $request->namaPaket,
@@ -79,6 +89,19 @@ class DaftarController extends Controller
 
     public function tertib()
     {
+        // Cek
+        $paket = PaketPekerjaan::where('id_user', Auth::user()->id)->first();
+        $TUsaha = TertibUsaha::where('id_user', Auth::user()->id)->first();
+
+
+        if (!isset($paket)) {
+            return redirect('/daftar');
+        }
+
+        if (isset($TUsaha)) {
+            return redirect('/penyelenggaraan');
+        }
+
         return view('daftar/tertib', [
             'title' => 'Tertib Usaha Jasa Konstruksi'
         ]);
@@ -87,6 +110,7 @@ class DaftarController extends Controller
     public function storeTertib(Request $request)
     {
         // dd($request);
+
 
         $nib = $request->file('nib')->store('nib');
         $npwp_perusahaan = $request->file('npwp_perusahaan')->store('npwp_perusahaan');
@@ -104,7 +128,7 @@ class DaftarController extends Controller
         $dokumen_kontrak_k3 = $request->file('dokumen_kontrak_k3')->store('dokumen_kontrak_k3');
 
         TertibUsaha::create([
-            'id_user' => 1,
+            'id_user' => Auth::user()->id,
             'klasifikasi_usaha' => $request->klasifikasi_usaha,
             'bentuk_usaha' => $request->bentuk_usaha,
             'kualifikasi_usaha' => $request->kualifikasi_usaha,
@@ -123,6 +147,17 @@ class DaftarController extends Controller
 
     public function penyelenggaraan()
     {
+        $paket = PaketPekerjaan::where('id_user', Auth::user()->id)->first();
+        $TUsaha = TertibUsaha::where('id_user', Auth::user()->id)->first();
+        $TPenyelenggaraan = TertibPenyelenggaraan::where('id_user', Auth::user()->id)->first();
+
+        if (!isset($TUsaha)) {
+            return redirect('/tertib');
+        }
+        if (isset($TPenyelenggaraan)) {
+            return redirect('/profil');
+        }
+
         return view('daftar/penyelenggaraan', [
             'title' => 'Tertib Penyelenggaraan Jasa Konstruksi'
         ]);
@@ -137,7 +172,7 @@ class DaftarController extends Controller
 
 
         TertibPenyelenggaraan::create([
-            'id_user' => 1,
+            'id_user' => Auth::user()->id,
             'jaminan_pelaksanaan' => $request->jaminan_pelaksanaan,
             'dokumen_jaminan_pelaksanaan' => $dokumen_jaminan_pelaksanaan,
             'jaminan_uang_muka' => $request->jaminan_uang_muka,
@@ -155,7 +190,7 @@ class DaftarController extends Controller
 
         ]);
 
-        return redirect('/');
+        return redirect('/profil');
     }
 
 }

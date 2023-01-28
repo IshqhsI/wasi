@@ -6,6 +6,10 @@
     left: 0;
     bottom: 0;
     position: fixed;
+    /* background-color: orange; */
+}
+
+.active {
 }
 
 .radio {

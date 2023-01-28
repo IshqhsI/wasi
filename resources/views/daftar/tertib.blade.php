@@ -150,13 +150,13 @@
                             <div class="form-group my-2">
                                 <label class="fw-bold" for="lama_pendirian_badan_usaha">Lama Pendirian Badan Usaha</label>
                                 <div class="form-group my-2 radio">
-                                    <input class="form-check-input " type="radio" name="lama_pendirian_badan_usaha"
+                                    <input class="form-check-input cek" type="radio" name="lama_pendirian_badan_usaha"
                                         id="kurang_dari_sama_dengan_3" value="Kurang dari/ sama dengan 3 tahun">
                                     <label class="form-check-label" for="kurang_dari_sama_dengan_3">
                                         Kurang dari/ sama dengan 3 tahun
                                     </label>
                                     <br>
-                                    <input class="form-check-input" type="radio" name="lama_pendirian_badan_usaha"
+                                    <input class="form-check-input cek" type="radio" name="lama_pendirian_badan_usaha"
                                         id="lebih_dari_3" value="Lebih dari 3 tahun">
                                     <label class="form-check-label" for="lebih_dari_3">
                                         Lebih dari 3 tahun
@@ -185,7 +185,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-group my-2 lebihdariTiga">
+                            <div class="form-group my-2">
                                 <label class="fw-bold" for="dokumen_kontrak_k3">Dokumen Kontrak K3 Konstruksi</label>
                                 <div class="input-group my-2">
                                     <input type="file" class="form-control" id="dokumen_kontrak_k3"
