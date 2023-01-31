@@ -171,7 +171,7 @@ class AdminController extends Controller
                 'jadwal_pelaksanaan_pekerjaan' => $jadwalPelaksanaanPekerjaan,
                 'sumber_dana' => $request->sumberDana
             ]);
-        return redirect('/admin');
+        return redirect('/admin')->with('edit', 'Data Berhasil Diedit');
     }
 
     /**
@@ -237,7 +237,7 @@ class AdminController extends Controller
                 'dokumen_kontrak_k3' => $dokumen_kontrak_k3
             ]);
 
-        return redirect('/admin');
+        return redirect('/admin')->with('edit', 'Data Berhasil Diedit');
     }
 
     /**
@@ -303,7 +303,7 @@ class AdminController extends Controller
                 'jumlah_tenaga_kerja_yang_dipekerjakan' => $request->jumlah_tenaga_kerja_yang_dipekerjakan,
                 'jumlah_tenaga_kerja_yang_memiliki_sertifikat' => $request->jumlah_tenaga_kerja_yang_memiliki_sertifikat
             ]);
-        return redirect('/admin');
+        return redirect('/admin')->with('edit', 'Data Berhasil Diedit');
     }
 
 

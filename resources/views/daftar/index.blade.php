@@ -44,21 +44,7 @@
                             <label class="fw-bold" for="lokasi">Lokasi Pekerjaan</label>
                             <input type="text" name="lokasi" id="lokasi" class="form-control my-2">
 
-                            <div class="form-group my-2">
-                                <label class="fw-bold" for="kompleksPekerjaan">Kompleksitas Pekerjaan</label>
-                                <div class="form-group my-2 radio">
-                                    <input class="form-check-input " type="radio" name="kompleksPekerjaan" id="komplek"
-                                        value="Komplek">
-                                    <label class="form-check-label" for="komplek">
-                                        Komplek
-                                    </label>
-                                    <input class="form-check-input" type="radio" name="kompleksPekerjaan" id="sederhana"
-                                        value="Sederhana">
-                                    <label class="form-check-label" for="sederhana">
-                                        Sederhana
-                                    </label>
-                                </div>
-                            </div>
+
 
                             <label class="fw-bold" for="namaPerusahaan">Nama Perusahaan</label>
                             <input type="text" name="namaPerusahaan" id="namaPerusahaan" class="form-control my-2">
@@ -91,25 +77,6 @@
                                 </div>
                             </div>
 
-                            <div class="form-group my-2">
-                                <label class="fw-bold" for="metodePembayaran">Metode Pembayaran Pekerjaan</label>
-                                <div class="form-group my-2 radio">
-                                    <input class="form-check-input " type="radio" name="metodePembayaran"
-                                        id="sertifikatBulanan" value="Monthly Certificate ( Sertifikat Bulanan )">
-                                    <label class="form-check-label me-4" for="sertifikatBulanan">
-                                        Monthly Certificate ( Sertifikat Bulanan )
-                                    </label> <br>
-                                    <input class="form-check-input" type="radio" name="metodePembayaran"
-                                        id="termin" value="Termin">
-                                    <label class="form-check-label" for="termin">
-                                        Termin
-                                    </label>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="col-lg-6 myBorder">
                             <label class="fw-bold" for="noKontrak">Nomor Kontrak</label>
                             <input type="text" name="noKontrak" id="noKontrak" class="form-control my-2">
 
@@ -122,6 +89,11 @@
                                     </span>
                                 </div>
                             </div>
+
+                        </div>
+
+                        <div class="col-lg-6 myBorder">
+
 
                             <label class="fw-bold" for="nilaiKontrak">Nilai Kontrak</label>
                             <input type="text" name="nilaiKontrak" id="nilaiKontrak" class="form-control my-2">
@@ -143,6 +115,22 @@
                             </div>
 
                             <div class="form-group my-2">
+                                <label class="fw-bold" for="kompleksPekerjaan">Kompleksitas Pekerjaan</label>
+                                <div class="form-group my-2 radio">
+                                    <input class="form-check-input " type="radio" name="kompleksPekerjaan"
+                                        id="komplek" value="Komplek">
+                                    <label class="form-check-label" for="komplek">
+                                        Komplek
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="kompleksPekerjaan"
+                                        id="sederhana" value="Sederhana">
+                                    <label class="form-check-label" for="sederhana">
+                                        Sederhana
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group my-2">
                                 <label class="fw-bold" for="dokumenKontrak">Dokumen Kontrak</label>
                                 <div class="input-group my-2">
                                     <input type="file" class="form-control" id="dokumenKontrak"
@@ -151,13 +139,23 @@
                                 </div>
                             </div>
 
-                            <label class="fw-bold" for="konsultanPengawas">Konsultan Pengawas</label>
-                            <input type="text" name="konsultanPengawas" id="konsultanPengawas"
-                                class="form-control my-2">
+                            <div class="form-group my-2">
+                                <label class="fw-bold" for="metodePembayaran">Metode Pembayaran Pekerjaan</label>
+                                <div class="form-group my-2 radio">
+                                    <input class="form-check-input " type="radio" name="metodePembayaran"
+                                        id="sertifikatBulanan" value="Monthly Certificate ( Sertifikat Bulanan )">
+                                    <label class="form-check-label me-4" for="sertifikatBulanan">
+                                        Monthly Certificate ( Sertifikat Bulanan )
+                                    </label> <br>
+                                    <input class="form-check-input" type="radio" name="metodePembayaran"
+                                        id="termin" value="Termin">
+                                    <label class="form-check-label" for="termin">
+                                        Termin
+                                    </label>
+                                </div>
+                            </div>
 
-                            <label class="fw-bold" for="konsultanPerencana">Konsultan Perencana</label>
-                            <input type="text" name="konsultanPerencana" id="konsultanPerencana"
-                                class="form-control my-2">
+
 
                             <label class="fw-bold" for="waktuPelaksanaanKerja">Waktu Pelaksanaan Kerja</label>
                             <input type="text" name="waktuPelaksanaanKerja" id="waktuPelaksanaanKerja"
@@ -202,6 +200,14 @@
                                     </label>
                                 </div>
                             </div>
+
+                            <label class="fw-bold" for="konsultanPengawas">Konsultan Pengawas</label>
+                            <input type="text" name="konsultanPengawas" id="konsultanPengawas"
+                                class="form-control my-2">
+
+                            <label class="fw-bold" for="konsultanPerencana">Konsultan Perencana</label>
+                            <input type="text" name="konsultanPerencana" id="konsultanPerencana"
+                                class="form-control my-2">
 
                         </div>
 

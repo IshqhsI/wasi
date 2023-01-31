@@ -25,7 +25,7 @@ use App\Http\Controllers\AdminController;
 //     return view('welcome');
 // });
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->middleware('guest');
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 
 // Route::get('/login', [LoginController::index, 'index']);

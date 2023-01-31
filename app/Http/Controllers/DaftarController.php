@@ -168,7 +168,13 @@ class DaftarController extends Controller
         $dokumen_jaminan_pelaksanaan = $request->file('dokumen_jaminan_pelaksanaan')->store('dokumen_jaminan_pelaksanaan');
         $dokumen_jaminan_uang_muka = $request->file('dokumen_jaminan_uang_muka')->store('dokumen_jaminan_uang_muka');
         $bukti_pembayaran_asuransi_tenaga_kerja = $request->file('bukti_pembayaran_asuransi_tenaga_kerja')->store('bukti_pembayaran_asuransi_tenaga_kerja');
-        $bukti_sertifikat_operasional = $request->file('bukti_sertifikat_operasional')->store('bukti_sertifikat_operasional');
+
+        if ($request->file('bukti_sertifikat_operasional') !== NULL) {
+            $bukti_sertifikat_operasional = $request->file('bukti_sertifikat_operasional')->store('bukti_sertifikat_operasional');
+        } else {
+            $bukti_sertifikat_operasional = 'Tidak Ada';
+
+        }
 
 
         TertibPenyelenggaraan::create([
@@ -190,7 +196,8 @@ class DaftarController extends Controller
 
         ]);
 
-        return redirect('/profil');
+        return redirect('/profil')->with('daftar', 'success');
+        ;
     }
 
 }

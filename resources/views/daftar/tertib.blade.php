@@ -132,16 +132,6 @@
                                 </div>
                             </div>
 
-                            <label class="fw-bold" for="tglKontrak">Tanggal Kontrak</label>
-                            <div class="form-group my-2">
-                                <div class='input-group' id='tglKontrak'>
-                                    <input type='date' class="form-control" name="tglKontrak" />
-                                    <span class="input-group-text">
-                                        <span class="glyphicon glyphicon-calendar"></span>
-                                    </span>
-                                </div>
-                            </div>
-
                             <label class="fw-bold" for="no_tglAkta_namaNotaris">Nomor, Tanggal Akta Pendirian, dan Nama
                                 Notaris</label>
                             <input type="text" name="no_tglAkta_namaNotaris" id="no_tglAkta_namaNotaris"

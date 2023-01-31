@@ -10,7 +10,7 @@
                     <div class="col-md-6">
                         <ol class="breadcrumb float-end mb-1 pt-2">
                             <li class="breadcrumb-item"><a href="/" class="text-decoration-none">Dashboard</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Profile</li>
+                            <li class="breadcrumb-item active" aria-current="page">Profil</li>
                         </ol>
                     </div>
 

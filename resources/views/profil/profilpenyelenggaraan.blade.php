@@ -10,7 +10,7 @@
                     <div class="col-md-6">
                         <ol class="breadcrumb float-end mb-1 pt-2">
                             <li class="breadcrumb-item"><a href="/" class="text-decoration-none">Dashboard</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Daftar</li>
+                            <li class="breadcrumb-item active" aria-current="page">Profil</li>
                         </ol>
                     </div>
 
@@ -127,7 +127,7 @@
                             </div>
                         </li>
 
-                        @if (isset($row->bukti_sertifikat_operasional))
+                        @if ($row->bukti_sertifikat_operasional !== 'Tidak Ada')
                             <li class="list-group-item d-flex justify-content-between align-items-start">
                                 <div class="ms-2 me-auto">
                                     <div class="fw-bold">Bukti sertifikat operasional kelaikan alat (jika ada)</div>

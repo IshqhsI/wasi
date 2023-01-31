@@ -32,7 +32,8 @@ class RegisterController extends Controller
         User::create($validated);
 
         return redirect(
-            '/login'
-        );
+                    '/login'
+                )->with('reg', 'Data Berhasil Dihapus');
+        ;
     }
 }

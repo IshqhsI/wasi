@@ -25,8 +25,7 @@
     {{-- MyCSS --}}
     <link rel="stylesheet" href="assets/css/style.css">
 
-
-
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
 </head>
@@ -37,6 +36,30 @@
         @include('layouts.navbar')
 
     </main>
+
+    @if (session('status'))
+        <script>
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Data berhasil dihapus',
+                showConfirmButton: false,
+                timer: 1750
+            })
+        </script>
+    @endif
+
+    @if (session('edit'))
+        <script>
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Data berhasil diedit',
+                showConfirmButton: false,
+                timer: 1750
+            })
+        </script>
+    @endif
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
     </script>

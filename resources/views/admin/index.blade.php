@@ -28,11 +28,11 @@
                 </div>
             </div>
 
-            @if (session('status'))
+            {{-- @if (session('status'))
                 <div class="alert alert-success">
                     {{ session('status') }}
                 </div>
-            @endif
+            @endif --}}
 
             <h3 class="fs-4 mb-3 mt-5">List Data Pendaftar</h3>
             <table id="example" class="table table-striped table-bordered" style="width:100%">
