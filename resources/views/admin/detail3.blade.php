@@ -39,7 +39,8 @@
                                     <div class="fw-bold">Dokumen Jaminan Pelaksanaan</div>
                                     <div class="my-2"><a href="/storage/{{ $row->dokumen_jaminan_pelaksanaan }}"
                                             class="btn btn-success" target="blank">Lihat..</a>
-                                        <a href="#" class="btn btn-warning" target="blank">Download..</a>
+                                        <a href="/storage/{{ $row->dokumen_jaminan_pelaksanaan }}" class="btn btn-warning"
+                                            target="blank" download>Download..</a>
                                     </div>
                                 </div>
                             </li>
@@ -56,7 +57,8 @@
                                     <div class="fw-bold">Dokumen Jaminan Uang Muka</div>
                                     <div class="my-2"><a href="/storage/{{ $row->dokumen_jaminan_uang_muka }}"
                                             class="btn btn-success" target="blank">Lihat..</a>
-                                        <a href="#" class="btn btn-warning" target="blank">Download..</a>
+                                        <a href="/storage/{{ $row->dokumen_jaminan_uang_muka }}" class="btn btn-warning"
+                                            target="blank" download>Download..</a>
                                     </div>
                                 </div>
                             </li>
@@ -83,7 +85,8 @@
                                     <div class="my-2"><a
                                             href="/storage/{{ $row->bukti_pembayaran_asuransi_tenaga_kerja }}"
                                             class="btn btn-success" target="blank">Lihat..</a>
-                                        <a href="#" class="btn btn-warning" target="blank">Download..</a>
+                                        <a href="/storage/{{ $row->bukti_pembayaran_asuransi_tenaga_kerja }}"
+                                            class="btn btn-warning" target="blank" download>Download..</a>
                                     </div>
                                 </div>
                             </li>
@@ -133,7 +136,8 @@
                                     <div class="fw-bold">Bukti sertifikat operasional kelaikan alat (jika ada)</div>
                                     <div class="my-2"><a href="/storage/{{ $row->bukti_sertifikat_operasional }}"
                                             class="btn btn-success" target="blank">Lihat..</a>
-                                        <a href="#" class="btn btn-warning" target="blank">Download..</a>
+                                        <a href="/storage/{{ $row->bukti_sertifikat_operasional }}" class="btn btn-warning"
+                                            target="blank" download>Download..</a>
                                     </div>
                                 </div>
                             </li>

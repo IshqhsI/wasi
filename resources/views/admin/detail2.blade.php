@@ -59,7 +59,8 @@
                                 <div class="fw-bold">NIB ( Nomor Induk Berusaha )</div>
                                 <div class="my-2"><a href="/storage/{{ $row->nib }}" class="btn btn-success"
                                         target="blank">Lihat..</a>
-                                    <a href="#" class="btn btn-warning" target="blank">Download..</a>
+                                    <a href="/storage/{{ $row->nib }}" class="btn btn-warning" target="blank"
+                                        download>Download..</a>
                                 </div>
                             </div>
                         </li>
@@ -69,7 +70,8 @@
                                 <div class="fw-bold">NPWP Perusahaan</div>
                                 <div class="my-2"><a href="/storage/{{ $row->npwp_perusahaan }}" class="btn btn-success"
                                         target="blank">Lihat..</a>
-                                    <a href="#" class="btn btn-warning" target="blank">Download..</a>
+                                    <a href="/storage/{{ $row->npwp_perusahaan }}" class="btn btn-warning" target="blank"
+                                        download>Download..</a>
                                 </div>
                             </div>
                         </li>
@@ -82,7 +84,8 @@
                                 <div class="fw-bold">Sertifikat Badan Usaha</div>
                                 <div class="my-2"><a href="/storage/{{ $row->sertifikat_badan_usaha }}"
                                         class="btn btn-success" target="blank">Lihat..</a>
-                                    <a href="#" class="btn btn-warning" target="blank">Download..</a>
+                                    <a href="/storage/{{ $row->sertifikat_badan_usaha }}" class="btn btn-warning"
+                                        target="blank" download>Download..</a>
                                 </div>
                             </div>
                         </li>
@@ -107,7 +110,8 @@
                                     <div class="fw-bold">Riwayat Pengalaman Badan Usaha (Pekerjaan sejenis)</div>
                                     <div class="my-2"><a href="/storage/{{ $row->riwayat_pengalaman_badan_usaha }}"
                                             class="btn btn-success" target="blank">Lihat..</a>
-                                        <a href="#" class="btn btn-warning" target="blank">Download..</a>
+                                        <a href="/storage/{{ $row->riwayat_pengalaman_badan_usaha }}"
+                                            class="btn btn-warning" target="blank" download>Download..</a>
                                     </div>
                                 </div>
                             </li>
@@ -117,7 +121,8 @@
                                     <div class="fw-bold">Dokumen Berita Acara Serah Terima Pekerjaan (PHO)</div>
                                     <div class="my-2"><a href="/storage/{{ $row->dokumen_berita_acara_serah_terima }}"
                                             class="btn btn-success" target="blank">Lihat..</a>
-                                        <a href="#" class="btn btn-warning" target="blank">Download..</a>
+                                        <a href="/storage/{{ $row->dokumen_berita_acara_serah_terima }}"
+                                            class="btn btn-warning" target="blank" download>Download..</a>
                                     </div>
                                 </div>
                             </li>
@@ -128,7 +133,8 @@
                                 <div class="fw-bold">Dokumen Kontrak K3 Konstruksi</div>
                                 <div class="my-2"><a href="/storage/{{ $row->dokumen_kontrak_k3 }}"
                                         class="btn btn-success" target="blank">Lihat..</a>
-                                    <a href="#" class="btn btn-warning" target="blank">Download..</a>
+                                    <a href="/storage/{{ $row->dokumen_kontrak_k3 }}" class="btn btn-warning"
+                                        target="blank" download>Download..</a>
                                 </div>
                             </div>
                         </li>

@@ -125,7 +125,8 @@
                             <div class="fw-bold">Dokumen Kontrak</div>
                             <div class="my-2"><a href="/../../storage/{{ $row->dokumen_kontrak }}"
                                     class="btn btn-success" target="blank">Lihat..</a>
-                                <a href="#" class="btn btn-warning" target="blank">Download..</a>
+                                <a href="/../../storage/{{ $row->dokumen_kontrak }}" class="btn btn-warning" target="blank"
+                                    download>Download..</a>
                             </div>
                         </div>
                     </li>
@@ -162,8 +163,9 @@
                         <div class="ms-2 me-auto">
                             <div class="fw-bold">Jadwal Pelaksanaan Pekerjaan</div>
                             <div class="my-2"><a href="/../../storage/{{ $row->jadwal_pelaksanaan_pekerjaan }}"
-                                    class="btn btn-success" target="blank">Lihat..</a>
-                                <a href="#" class="btn btn-warning" target="blank">Download..</a>
+                                    class="btn btn-success" target="blank" download="">Lihat..</a>
+                                <a href="/../../storage/{{ $row->jadwal_pelaksanaan_pekerjaan }}" class="btn btn-warning"
+                                    target="blank" download>Download..</a>
                             </div>
                         </div>
                     </li>
